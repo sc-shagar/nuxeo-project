@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.mongodb.connection">
+
+  <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
+    <connection id="default">
+      <server>localhost:27017</server>
+      <dbname>Testing</dbname>
+       <ssl>false</ssl>
+      <trustStorePath></trustStorePath>
+      <trustStorePassword></trustStorePassword>
+      <trustStoreType></trustStoreType>
+      <keyStorePath></keyStorePath>
+      <keyStorePassword></keyStorePassword>
+      <keyStoreType></keyStoreType>
+    </connection>
+  </extension>
+
+</component>

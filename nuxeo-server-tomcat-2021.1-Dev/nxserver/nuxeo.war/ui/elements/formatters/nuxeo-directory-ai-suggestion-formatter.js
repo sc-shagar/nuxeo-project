@@ -1,0 +1,6 @@
+/*! For license information please see nuxeo-directory-ai-suggestion-formatter.js.LICENSE.txt */
+import{html}from"@polymer/polymer/lib/utils/html-tag.js";import"@nuxeo/nuxeo-elements/nuxeo-element.js";import{mixinBehaviors}from"@polymer/polymer/lib/legacy/class.js";import{FormatBehavior}from"@nuxeo/nuxeo-ui-elements/nuxeo-format-behavior.js";import AISuggestionMixin from"../nuxeo-ai-suggestion-mixin.js";import"../nuxeo-ai-icons.js";import"../nuxeo-ai-suggestion-formatter-styles.js";class DirectoryAISuggestionFormatter extends(mixinBehaviors([FormatBehavior],AISuggestionMixin(Nuxeo.Element))){static get template(){return html`
+      <style include="nuxeo-ai-suggestion-formatter-styles"></style>
+      <span>[[formatDirectory(suggestion.value)]]</span>
+      <iron-icon icon="[[_getConfidenceIcon(suggestion.confidence)]]"></iron-icon>
+    `}static get is(){return"nuxeo-directory-ai-suggestion-formatter"}}customElements.define(DirectoryAISuggestionFormatter.is,DirectoryAISuggestionFormatter),Nuxeo.DirectoryAISuggestionFormatter=DirectoryAISuggestionFormatter;export default DirectoryAISuggestionFormatter;
