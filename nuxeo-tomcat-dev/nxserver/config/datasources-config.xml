@@ -1,4 +1,4 @@
-`<?xml version="1.0"?>
+<?xml version="1.0"?>
 <component name="org.nuxeo.runtime.datasource.server.contrib">
 
   <extension target="org.nuxeo.runtime.datasource" point="datasources">
@@ -21,5 +21,7 @@
     <link name="jdbc/nxuidsequencer" global="jdbc/nuxeo" type="javax.sql.DataSource" />
     <link name="jdbc/keyvaluestore" global="jdbc/nuxeo" type="javax.sql.DataSource" />
     <link name="jdbc/repository_default" global="jdbc/nuxeo" type="javax.sql.DataSource" />
+    <link name="jdbc/nxquartz" global="jdbc/nuxeo" type="javax.sql.DataSource" />
+    <link name="jdbc/nxquartz_no_tx" global="jdbc/nuxeo" type="javax.sql.DataSource" />
   </extension>
 </component>

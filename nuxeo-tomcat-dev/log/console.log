@@ -24,3 +24,224 @@
 ======================================================================
 Started in 0min28s
 2021-04-23T09:33:39,405 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Go to http://localhost:8080/nuxeo
+2021-05-17T04:31:08,936 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:31:08,940 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:31:08,972 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:31:08,972 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:31:08,972 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:31:08,973 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:31:08,974 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:31:09,185 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T04:31:09,327 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T04:31:09,650 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T04:31:15,068 ERROR [main] [org.nuxeo.launcher.config.BackingServiceConfigurator] Unable to connect to MongoDB at localhost:27017, please check your connection
+org.nuxeo.launcher.config.ConfigurationException: Unable to connect to MongoDB at localhost:27017, please check your connection
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:82) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.lambda$verifyInstallation$2(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-26408.jar:?]
+	at net.jodah.failsafe.Functions$10.call(Functions.java:252) ~[nuxeo-launcher-26408.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.call(SyncFailsafe.java:145) [nuxeo-launcher-26408.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.run(SyncFailsafe.java:81) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.verifyInstallation(BackingServiceConfigurator.java:102) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.config.ConfigurationGenerator.verifyInstallation(ConfigurationGenerator.java:1263) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1652) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.launch(NuxeoLauncher.java:990) [nuxeo-launcher-26408.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.main(NuxeoLauncher.java:935) [nuxeo-launcher-26408.jar:?]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 5000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:177) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.SingleServerCluster.getDescription(SingleServerCluster.java:42) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:135) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:95) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:266) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:148) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:79) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	... 10 more
+2021-05-17T04:31:15,087 ERROR [main] [org.nuxeo.launcher.NuxeoLauncher] Could not run configuration: Unable to connect to MongoDB at localhost:27017, please check your connection
+2021-05-17T04:32:40,214 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:32:40,217 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:32:40,251 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:32:40,252 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:32:40,252 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:32:40,447 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T04:32:40,551 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T04:32:40,823 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T04:32:41,072 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Server started with process ID: 1061817
+2021-05-17T04:32:45,089 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:47,092 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:49,094 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:51,097 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:53,099 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:55,101 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:57,103 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:32:59,106 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:33:01,108 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:33:04,111 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:33:07,114 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:33:09,124 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:33:09,130 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] ======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 545
+======================================================================
+Started in 0min28s
+2021-05-17T04:33:09,131 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Go to http://localhost:8080/nuxeo
+2021-05-17T04:38:32,278 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:38:32,281 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:38:32,330 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:38:32,330 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:38:32,331 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:38:32,332 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:38:32,332 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:38:32,517 ERROR [main] [org.nuxeo.launcher.NuxeoLauncher] Cannot execute command. A server is running with process ID 1061817
+2021-05-17T04:38:45,630 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:38:45,633 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:38:45,671 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:38:45,671 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:38:45,672 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:38:45,673 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:38:45,674 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:38:45,877 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Stopping server...
+2021-05-17T04:38:46,476 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:38:48,165 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:38:49,166 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T04:38:49,168 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Stopped in 0min03s
+2021-05-17T04:39:01,531 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:39:01,534 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:39:01,567 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:39:01,568 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:39:01,568 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:39:01,569 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:39:01,570 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:39:01,814 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T04:39:01,923 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T04:39:02,196 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T04:39:07,596 ERROR [main] [org.nuxeo.launcher.config.BackingServiceConfigurator] Unable to connect to MongoDB at localhost, please check your connection
+org.nuxeo.launcher.config.ConfigurationException: Unable to connect to MongoDB at localhost, please check your connection
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:82) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.lambda$verifyInstallation$2(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-20677.jar:?]
+	at net.jodah.failsafe.Functions$10.call(Functions.java:252) ~[nuxeo-launcher-20677.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.call(SyncFailsafe.java:145) [nuxeo-launcher-20677.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.run(SyncFailsafe.java:81) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.verifyInstallation(BackingServiceConfigurator.java:102) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.config.ConfigurationGenerator.verifyInstallation(ConfigurationGenerator.java:1263) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1652) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.launch(NuxeoLauncher.java:990) [nuxeo-launcher-20677.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.main(NuxeoLauncher.java:935) [nuxeo-launcher-20677.jar:?]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 5000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:177) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.SingleServerCluster.getDescription(SingleServerCluster.java:42) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:135) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:95) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:266) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:148) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:79) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	... 10 more
+2021-05-17T04:39:07,610 ERROR [main] [org.nuxeo.launcher.NuxeoLauncher] Could not run configuration: Unable to connect to MongoDB at localhost, please check your connection
+2021-05-17T04:42:04,499 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:42:04,502 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:42:04,536 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:42:04,536 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:42:04,536 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:42:04,537 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:42:04,538 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:42:04,771 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T04:42:04,897 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T04:42:05,217 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T04:42:10,709 ERROR [main] [org.nuxeo.launcher.config.BackingServiceConfigurator] Unable to connect to MongoDB at localhost:27017, please check your connection
+org.nuxeo.launcher.config.ConfigurationException: Unable to connect to MongoDB at localhost:27017, please check your connection
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:82) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.lambda$verifyInstallation$2(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-16586.jar:?]
+	at net.jodah.failsafe.Functions$10.call(Functions.java:252) ~[nuxeo-launcher-16586.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.call(SyncFailsafe.java:145) [nuxeo-launcher-16586.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.run(SyncFailsafe.java:81) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.verifyInstallation(BackingServiceConfigurator.java:102) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.config.ConfigurationGenerator.verifyInstallation(ConfigurationGenerator.java:1263) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1652) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.launch(NuxeoLauncher.java:990) [nuxeo-launcher-16586.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.main(NuxeoLauncher.java:935) [nuxeo-launcher-16586.jar:?]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 5000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused (Connection refused)}}]
+	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:177) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.internal.connection.SingleServerCluster.getDescription(SingleServerCluster.java:42) ~[mongodb-driver-core-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:135) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:95) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:266) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:170) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:148) ~[mongodb-driver-sync-4.1.1.jar:?]
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:79) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	... 10 more
+2021-05-17T04:42:10,724 ERROR [main] [org.nuxeo.launcher.NuxeoLauncher] Could not run configuration: Unable to connect to MongoDB at localhost:27017, please check your connection
+2021-05-17T04:52:46,150 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-tomcat-dev
+2021-05-17T04:52:46,153 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-tomcat-dev/bin/nuxeo.conf
+2021-05-17T04:52:46,185 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common-base
+2021-05-17T04:52:46,185 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/common
+2021-05-17T04:52:46,185 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/default
+2021-05-17T04:52:46,186 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb
+2021-05-17T04:52:46,187 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-tomcat-dev/templates/mongodb-audit
+2021-05-17T04:52:46,419 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T04:52:46,567 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T04:52:46,912 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T04:52:47,237 ERROR [main] [org.nuxeo.launcher.config.BackingServiceConfigurator] Cannot setup SSL context: org.nuxeo.runtime.mongodb.MongoDBConnectionConfig@253b380a
+org.nuxeo.runtime.RuntimeServiceException: Cannot setup SSL context: org.nuxeo.runtime.mongodb.MongoDBConnectionConfig@253b380a
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.getSSLContext(MongoDBConnectionHelper.java:231) ~[nuxeo-runtime-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.newMongoClient(MongoDBConnectionHelper.java:161) ~[nuxeo-runtime-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:73) ~[nuxeo-core-storage-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.lambda$verifyInstallation$2(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.Functions$10.call(Functions.java:252) ~[nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.call(SyncFailsafe.java:145) [nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.run(SyncFailsafe.java:81) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.verifyInstallation(BackingServiceConfigurator.java:102) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.config.ConfigurationGenerator.verifyInstallation(ConfigurationGenerator.java:1263) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1652) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.launch(NuxeoLauncher.java:990) [nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.main(NuxeoLauncher.java:935) [nuxeo-launcher-21898.jar:?]
+Caused by: java.nio.file.NoSuchFileException: "javax.net.ssl.keyStore"
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:371) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:422) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:156) ~[?:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.loadKeyStore(MongoDBConnectionHelper.java:243) ~[nuxeo-runtime-mongodb-2021.1.19.jar:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.getSSLContext(MongoDBConnectionHelper.java:217) ~[nuxeo-runtime-mongodb-2021.1.19.jar:?]
+	... 12 more
+2021-05-17T04:52:47,251 ERROR [main] [org.nuxeo.launcher.NuxeoLauncher] Cannot execute command. Cannot setup SSL context: org.nuxeo.runtime.mongodb.MongoDBConnectionConfig@253b380a
+org.nuxeo.runtime.RuntimeServiceException: Cannot setup SSL context: org.nuxeo.runtime.mongodb.MongoDBConnectionConfig@253b380a
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.getSSLContext(MongoDBConnectionHelper.java:231) ~[?:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.newMongoClient(MongoDBConnectionHelper.java:161) ~[?:?]
+	at org.nuxeo.ecm.core.storage.mongodb.MongoDBChecker.check(MongoDBChecker.java:73) ~[?:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.lambda$verifyInstallation$2(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.Functions$10.call(Functions.java:252) ~[nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.call(SyncFailsafe.java:145) ~[nuxeo-launcher-21898.jar:?]
+	at net.jodah.failsafe.SyncFailsafe.run(SyncFailsafe.java:81) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.config.BackingServiceConfigurator.verifyInstallation(BackingServiceConfigurator.java:102) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.config.ConfigurationGenerator.verifyInstallation(ConfigurationGenerator.java:1263) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1652) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.launch(NuxeoLauncher.java:990) ~[nuxeo-launcher-21898.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.main(NuxeoLauncher.java:935) [nuxeo-launcher-21898.jar:?]
+Caused by: java.nio.file.NoSuchFileException: "javax.net.ssl.keyStore"
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:371) ~[?:?]
+	at java.nio.file.Files.newByteChannel(Files.java:422) ~[?:?]
+	at java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?]
+	at java.nio.file.Files.newInputStream(Files.java:156) ~[?:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.loadKeyStore(MongoDBConnectionHelper.java:243) ~[?:?]
+	at org.nuxeo.runtime.mongodb.MongoDBConnectionHelper.getSSLContext(MongoDBConnectionHelper.java:217) ~[?:?]
+	... 12 more
