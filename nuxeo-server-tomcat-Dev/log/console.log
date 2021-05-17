@@ -1,0 +1,52 @@
+2021-04-23T09:33:08,912 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-server-tomcat-2021.1
+2021-04-23T09:33:08,914 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-server-tomcat-2021.1/bin/nuxeo.conf
+2021-04-23T09:33:08,984 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-server-tomcat-2021.1/templates/common-base
+2021-04-23T09:33:08,984 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-server-tomcat-2021.1/templates/common
+2021-04-23T09:33:08,985 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-server-tomcat-2021.1/templates/default
+2021-04-23T09:33:09,215 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-04-23T09:33:09,341 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-04-23T09:33:09,650 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-04-23T09:33:10,724 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Server started with process ID: 1827173
+2021-04-23T09:33:14,752 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:16,755 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:18,758 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:20,760 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:22,762 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:24,765 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:26,767 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:28,770 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:30,772 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:33,774 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:36,777 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:39,370 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-04-23T09:33:39,404 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] ======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 545
+======================================================================
+Started in 0min28s
+2021-04-23T09:33:39,405 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Go to http://localhost:8080/nuxeo
+2021-05-17T03:38:21,575 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          /home/opc/nuxeo-project/nuxeo-server-tomcat-Dev
+2021-05-17T03:38:21,578 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: /home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/bin/nuxeo.conf
+2021-05-17T03:38:21,624 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/templates/common-base
+2021-05-17T03:38:21,624 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/templates/common
+2021-05-17T03:38:21,625 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: /home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/templates/default
+2021-05-17T03:38:21,867 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T03:38:21,973 WARN  [main] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T03:38:22,234 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T03:38:22,541 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Server started with process ID: 1048596
+2021-05-17T03:38:26,561 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:28,564 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:30,567 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:32,570 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:34,572 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:36,575 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:38,578 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:40,581 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:42,583 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:45,585 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:48,588 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:50,731 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T03:38:50,776 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] ======================================================================
+= Component Loading Status: Pending: 0 / Missing: 0 / Unstarted: 0 / Total: 545
+======================================================================
+Started in 0min28s
+2021-05-17T03:38:50,777 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Go to http://localhost:8080/nuxeo
