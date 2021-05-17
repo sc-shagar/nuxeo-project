@@ -1,0 +1,6 @@
+2021-04-01 10:01:32 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [616] milliseconds
+2021-04-01 10:01:53 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [21064] milliseconds
+2021-04-01 10:08:31 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [687] milliseconds
+2021-04-01 10:08:53 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [21490] milliseconds
+2021-04-01 10:12:34 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [628] milliseconds
+2021-04-01 10:12:56 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [22207] milliseconds

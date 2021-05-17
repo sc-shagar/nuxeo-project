@@ -1,0 +1,33 @@
+<div>
+      <span class="label label-success">2/2 OK </span>
+</div>
+<table class="dataTableNoBorder smallTable">
+  <tr>
+    <td class="fortyPercent">
+      <span class="user"> 
+        Administrator
+      </span>
+    </td>
+    <td class="tenPercent">
+        <span class="label label-success">OK</span>
+
+    </td>
+    <td class="fiftyPercent">
+      <span class="detail"></span>
+    </td>
+  </tr>
+  <tr>
+    <td class="fortyPercent">
+      <span class="user"> 
+        Administrator
+      </span>
+    </td>
+    <td class="tenPercent">
+        <span class="label label-success">OK</span>
+
+    </td>
+    <td class="fiftyPercent">
+      <span class="detail"></span>
+    </td>
+  </tr>
+</table>

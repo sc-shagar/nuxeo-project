@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<registry>
+  <entry key="nxserver/bundles/nuxeo-web-ui">
+    <version name="3.0.2" path="nxserver/bundles/nuxeo-web-ui-3.0.2.jar">
+      <package>nuxeo-web-ui-3.0.2</package>
+    </version>
+  </entry>
+</registry>
