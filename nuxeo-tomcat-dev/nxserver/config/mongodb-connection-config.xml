@@ -3,14 +3,14 @@
 
   <extension target="org.nuxeo.runtime.mongodb.MongoDBComponent" point="connection">
     <connection id="default">
-      <server>mongodb://mongodb1.core-dev.NEOS.today[:27017][,mongodb2.core-dev.NEOS.today[:27017]]</server>
+      <server>mongodb://mongodb2.core-dev.neos.today:27017,mongodb1.core-dev.neos.today:27017/?authMechanism=MONGODB-X509&amp;replicaSet=Testing&amp;readPreference=primary&amp;authSource=%24external&amp;appname=MongoDB%20Compass&amp;ssl=true&amp;authSource=$external</server>
       <dbname>nuxeo-Dev</dbname>
       <ssl>true</ssl>
       <trustStorePath></trustStorePath>
       <trustStorePassword></trustStorePassword>
       <trustStoreType></trustStoreType>
-      <keyStorePath>&quot;javax.net.ssl.keyStore&quot;</keyStorePath>
-      <keyStorePassword>&quot;javax.net.ssl.keyStorePassword&quot;</keyStorePassword>
+      <keyStorePath>/usr/java/jdk-11.0.10/lib/security/keystore.jks</keyStorePath>
+      <keyStorePassword>Scry@123</keyStorePassword>
       <keyStoreType></keyStoreType>
     </connection>
   </extension>
