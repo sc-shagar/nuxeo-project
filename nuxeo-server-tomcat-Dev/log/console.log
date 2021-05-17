@@ -50,3 +50,41 @@ Started in 0min28s
 ======================================================================
 Started in 0min28s
 2021-05-17T03:38:50,777 INFO  [main] [org.nuxeo.launcher.NuxeoLauncher] Go to http://localhost:8080/nuxeo
+  
+2021-05-17T09:23:44,681 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          C:\nuxeo-project\nuxeo-server-tomcat-Dev
+2021-05-17T09:23:44,683 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: C:\nuxeo-project\nuxeo-server-tomcat-Dev\bin\nuxeo.conf
+2021-05-17T09:23:44,938 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common-base
+2021-05-17T09:23:44,939 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common
+2021-05-17T09:23:44,939 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\default
+2021-05-17T09:23:47,236 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generation (nuxeo.force.generation=true)...
+2021-05-17T09:23:47,391 WARN  [NuxeoLauncherGUITask-7] [org.nuxeo.common.utils.TextTemplate] FreeMarker variables: ignored 'java.version' conflicting with 'java.version.[date]'
+2021-05-17T09:23:47,906 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.config.ConfigurationGenerator] Configuration files generated.
+2021-05-17T09:23:48,145 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.NuxeoLauncher] Server started with process ID: 22996
+2021-05-17T09:23:48,338 INFO  [Thread-2] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common-base
+2021-05-17T09:23:48,338 INFO  [Thread-2] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common
+2021-05-17T09:23:48,339 INFO  [Thread-2] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\default
+2021-05-17T09:23:54,196 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T09:23:56,225 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T09:23:58,247 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.NuxeoLauncher] .
+2021-05-17T09:23:59,460 INFO  [Thread-10] [org.nuxeo.launcher.NuxeoLauncher] Shutting down...
+2021-05-17T09:24:00,263 INFO  [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.NuxeoLauncher] .
+  
+2021-05-17T09:34:00,060 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo home:          C:\nuxeo-project\nuxeo-server-tomcat-Dev
+2021-05-17T09:34:00,062 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Nuxeo configuration: C:\nuxeo-project\nuxeo-server-tomcat-Dev\bin\nuxeo.conf
+2021-05-17T09:34:00,316 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common-base
+2021-05-17T09:34:00,316 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\common
+2021-05-17T09:34:00,316 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\default
+2021-05-17T09:34:00,319 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\mongodb
+2021-05-17T09:34:00,321 INFO  [main] [org.nuxeo.launcher.config.ConfigurationGenerator] Include template: C:\nuxeo-project\nuxeo-server-tomcat-Dev\templates\mongodb-audit
+2021-05-17T09:34:02,705 ERROR [NuxeoLauncherGUITask-7] [org.nuxeo.launcher.gui.NuxeoLauncherGUI] Could not initialize the packaging subsystem
+org.nuxeo.launcher.NuxeoLauncherException: Cannot execute command. A server is running with process ID 22996
+	at org.nuxeo.launcher.NuxeoLauncher.lambda$checkNoRunningServer$0(NuxeoLauncher.java:654) ~[nuxeo-launcher-8761.jar:?]
+	at java.util.Optional.ifPresent(Optional.java:183) ~[?:?]
+	at org.nuxeo.launcher.NuxeoLauncher.checkNoRunningServer(NuxeoLauncher.java:653) ~[nuxeo-launcher-8761.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.configure(NuxeoLauncher.java:1982) ~[nuxeo-launcher-8761.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStart(NuxeoLauncher.java:1651) ~[nuxeo-launcher-8761.jar:?]
+	at org.nuxeo.launcher.NuxeoLauncher.doStartAndWait(NuxeoLauncher.java:1605) ~[nuxeo-launcher-8761.jar:?]
+	at org.nuxeo.launcher.gui.NuxeoLauncherGUI.lambda$start$3(NuxeoLauncherGUI.java:263) ~[nuxeo-launcher-8761.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:834) [?:?]

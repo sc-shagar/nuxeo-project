@@ -4,7 +4,7 @@
 
   <extension target="org.nuxeo.elasticsearch.ElasticSearchComponent" point="elasticSearchEmbeddedServer">
     <elasticSearchEmbeddedServer clusterName="nuxeoCluster" nodeName="nuxeoNode"
-      pathData="/home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/nxserver/data/elasticsearch" pathLogs="/home/opc/nuxeo-project/nuxeo-server-tomcat-Dev/log/elasticsearch"
+      pathData="C:\nuxeo-project\nuxeo-server-tomcat-Dev\nxserver\data/elasticsearch" pathLogs="C:\nuxeo-project\nuxeo-server-tomcat-Dev\log/elasticsearch"
       httpEnabled="true" networkHost="127.0.0.1" />
   </extension>
 
